@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#0B5662">
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<rect width="200" height="200" fill="#0B5662"/>
+<text x="100" y="112" font-family="Georgia,serif" font-size="72" fill="#FFFFFF" text-anchor="middle">ND</text>
+</svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+body{margin:0;-webkit-font-smoothing:antialiased;background:#FFFFFF}
+a{color:#0B5662;text-decoration:none}
+a:hover{color:#EFA18E}
+*{box-sizing:border-box}
+::selection{background:#E9F3F5}
+@keyframes nd-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes nd-marquee-rev{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+</style>
+</helmet>
+
+<div style="font-family:'Cormorant Garamond',serif;color:#26383D;overflow-x:hidden;background:#FFFFFF" data-screen-label="home">
+
+<nav ref="{{ setNavRef }}" style="position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px clamp(20px,5vw,56px);background:#FFFFFF;border-bottom:1px solid #E9F3F5;transition:background 0.3s ease">
+  <a href="#top" style="font-family:'Oswald',sans-serif;font-weight:600;font-size:19px;letter-spacing:0.06em;color:#0B5662;text-decoration:none">NETWORK DYNAMICS</a>
+  <sc-if value="{{ !isMobile }}" hint-placeholder-val="{{ true }}">
+    <div style="display:flex;align-items:center;gap:clamp(18px,2.5vw,34px)">
+      <a href="#about" style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#294C54">About</a>
+      <a href="#services" style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#294C54">Services</a>
+      <a href="#products" style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#294C54">Products</a>
+      <a href="#network" style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#294C54">Our Network</a>
+      <a href="#team" style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#294C54">Team</a>
+      <a href="#contact" style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#294C54">Contact</a>
+      <a href="#contact" style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF;background:#0B5662;padding:12px 22px;border-radius:2px;min-height:44px;display:flex;align-items:center">Talk to Our Team</a>
+    </div>
+  </sc-if>
+  <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+    <button onClick="{{ toggleMenu }}" aria-label="Toggle navigation menu" aria-expanded="{{ mobileMenuOpen }}" style="background:none;border:1px solid #E9F3F5;border-radius:2px;width:44px;height:44px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer">
+      <span style="width:20px;height:2px;background:#0B5662"></span>
+      <span style="width:20px;height:2px;background:#0B5662"></span>
+      <span style="width:20px;height:2px;background:#0B5662"></span>
+    </button>
+  </sc-if>
+</nav>
+
+<sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+  <sc-if value="{{ mobileMenuOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position:sticky;top:57px;z-index:99;display:flex;flex-direction:column;background:#FFFFFF;border-bottom:1px solid #E9F3F5;padding:8px clamp(20px,5vw,56px) 20px">
+      <a href="#about" onClick="{{ closeMenu }}" style="font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:#294C54;padding:14px 0;border-bottom:1px solid #E9F3F5">About</a>
+      <a href="#services" onClick="{{ closeMenu }}" style="font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:#294C54;padding:14px 0;border-bottom:1px solid #E9F3F5">Services</a>
+      <a href="#products" onClick="{{ closeMenu }}" style="font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:#294C54;padding:14px 0;border-bottom:1px solid #E9F3F5">Products</a>
+      <a href="#network" onClick="{{ closeMenu }}" style="font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:#294C54;padding:14px 0;border-bottom:1px solid #E9F3F5">Our Network</a>
+      <a href="#contact" onClick="{{ closeMenu }}" style="font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:#294C54;padding:14px 0;border-bottom:1px solid #E9F3F5">Contact</a>
+      <a href="#contact" onClick="{{ closeMenu }}" style="font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF;background:#0B5662;padding:14px 20px;border-radius:2px;margin-top:14px;text-align:center;min-height:44px;display:flex;align-items:center;justify-content:center">Talk to Our Team</a>
+    </div>
+  </sc-if>
+</sc-if>
+
+<div id="top"></div>
+
+<div ref="{{ setHeroWrapRef }}" style="position:relative;height:100vh">
+  <div style="position:relative;height:100vh;overflow:hidden;background:#294C54">
+    <video key="hero-africa-logistics-hero-3dde4e9a" ref="{{ setVideoRef }}" playsInline="" preload="metadata" poster="uploads/network-dynamics-africa-map.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" aria-hidden="true">
+      <source src="uploads/network-dynamics-africa-logistics-hero-3dde4e9a.mp4" type="video/mp4">
+    </video>
+    <div style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(11,86,98,0.55) 0%, rgba(11,86,98,0.15) 45%, rgba(11,86,98,0) 65%)"></div>
+    <div style="position:absolute;left:0;top:0;height:100%;width:100%;display:flex;align-items:center;padding:0 clamp(20px,5vw,56px)">
+      <div style="max-width:640px">
+        <p style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#E9F3F5;margin:0 0 22px">CITY DEEP &middot; JOHANNESBURG &middot; SOUTH AFRICA</p>
+        <h1 style="font-family:'Oswald',sans-serif;font-weight:600;color:#FFFFFF;font-size:clamp(34px,5.5vw,64px);line-height:1.08;margin:0 0 26px;text-shadow:0 2px 24px rgba(0,0,0,0.25)">Moving fresh products.<br/>Connecting African markets.</h1>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2vw,22px);line-height:1.5;color:#F7FBFC;margin:0 0 36px;max-width:520px;display:inline-block;background:rgba(11,34,38,0.45);padding:14px 18px;border-radius:2px;backdrop-filter:blur(2px)">Integrated trading, warehousing, cold-chain, freight and field-to-fork support from one of Southern Africa's most connected fresh-produce hubs.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:16px">
+          <a href="#network" style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#0B5662;background:#FFFFFF;padding:16px 28px;border-radius:2px;min-height:44px;display:flex;align-items:center">Explore Our Network</a>
+          <a href="#services" style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF;background:transparent;border:1px solid rgba(255,255,255,0.6);padding:16px 28px;border-radius:2px;min-height:44px;display:flex;align-items:center">View Our Services</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="about" style="padding:clamp(80px,10vw,140px) clamp(20px,5vw,56px);max-width:1280px;margin:0 auto">
+  <div ref="{{ reveal }}" style="max-width:760px;margin:0 0 50px">
+    <p style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#5A747C;margin:0 0 18px">ABOUT US</p>
+    <h2 style="font-family:'Oswald',sans-serif;font-weight:500;font-size:clamp(30px,3.6vw,46px);color:#0B5662;line-height:1.15;margin:0 0 24px">Connected commerce, across Africa.</h2>
+    <p style="font-size:clamp(18px,1.6vw,21px);line-height:1.65;color:#26383D;margin:0">Network Dynamics began operations in South Africa in 2002. Its principal hub is located in City Deep, Johannesburg, supporting the storage, sales and distribution of fast-moving consumer goods across South Africa and into wider African markets. The business focuses on FMCG storage, sales and distribution. An internal freight operation supports incoming and outgoing containers and full truckload (FTL) movements across northbound, eastbound, westbound and southbound routes. Integrated road, air and sea services connect regional supply chains with local and international consumption markets.</p>
+  </div>
+  <div ref="{{ reveal }}" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:#E9F3F5;border:1px solid #E9F3F5">
+    <div style="background:#FFFFFF;padding:28px 24px;transition:transform 0.4s cubic-bezier(0.25,0,0,1),box-shadow 0.4s ease" style-hover="transform:scale(1.05);box-shadow:0 12px 32px rgba(11,86,98,0.14);z-index:1;position:relative">
+      <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(28px,3.4vw,36px);color:#0B5662;margin:0 0 8px;transition:transform 0.4s ease" style-hover="transform:scale(1.06)">2002</div>
+      <p style="font-size:16px;line-height:1.4;color:#5A747C;margin:0;font-family:'Cormorant Garamond',serif">Operations established in South Africa</p>
+    </div>
+    <div style="background:#FFFFFF;padding:28px 24px;transition:transform 0.4s cubic-bezier(0.25,0,0,1),box-shadow 0.4s ease" style-hover="transform:scale(1.05);box-shadow:0 12px 32px rgba(11,86,98,0.14);z-index:1;position:relative">
+      <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(28px,3.4vw,36px);color:#0B5662;margin:0 0 8px;transition:transform 0.4s ease" style-hover="transform:scale(1.06)">City Deep</div>
+      <p style="font-size:16px;line-height:1.4;color:#5A747C;margin:0;font-family:'Cormorant Garamond',serif">Main Johannesburg distribution hub</p>
+    </div>
+    <div style="background:#FFFFFF;padding:28px 24px;transition:transform 0.4s cubic-bezier(0.25,0,0,1),box-shadow 0.4s ease" style-hover="transform:scale(1.05);box-shadow:0 12px 32px rgba(11,86,98,0.14);z-index:1;position:relative">
+      <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(28px,3.4vw,36px);color:#0B5662;margin:0 0 8px;transition:transform 0.4s ease" style-hover="transform:scale(1.06)">Road, Air, Sea</div>
+      <p style="font-size:16px;line-height:1.4;color:#5A747C;margin:0;font-family:'Cormorant Garamond',serif">Regional and international freight services</p>
+    </div>
+  </div>
+</section>
+
+<div style="overflow:hidden;background:#F7FBFC;padding:36px 0;border-top:1px solid #E9F3F5;border-bottom:1px solid #E9F3F5">
+  <div style="display:flex;width:max-content;animation:nd-marquee-rev 40s linear infinite">
+    <sc-for list="{{ marqueeImages }}" as="img" hint-placeholder-count="17">
+      <img src="{{ img.src }}" alt="{{ img.alt }}" loading="lazy" style="height:110px;width:auto;margin-right:28px;border-radius:4px;flex-shrink:0"/>
+    </sc-for>
+    <sc-for list="{{ marqueeImages }}" as="img" hint-placeholder-count="17">
+      <img src="{{ img.src }}" alt="" aria-hidden="true" loading="lazy" style="height:110px;width:auto;margin-right:28px;border-radius:4px;flex-shrink:0"/>
+    </sc-for>
+  </div>
+</div>
+
+<section style="padding:clamp(80px,10vw,140px) clamp(20px,5vw,56px);max-width:1280px;margin:0 auto">
+  <div style="display:flex;gap:clamp(40px,6vw,90px);align-items:center;flex-wrap:wrap">
+    <div ref="{{ reveal }}" style="flex:1 1 420px;min-width:300px">
+      <p style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#5A747C;margin:0 0 18px">FROM FIELD TO FORK</p>
+      <h2 style="font-family:'Oswald',sans-serif;font-weight:500;font-size:clamp(30px,3.6vw,46px);color:#0B5662;line-height:1.15;margin:0 0 24px">Every link in the chain matters.</h2>
+      <p style="font-size:clamp(18px,1.6vw,21px);line-height:1.65;color:#26383D;margin:0">Network Dynamics connects suppliers, markets and customers through hands-on trading, storage, freight and distribution services. From our City Deep hub, we support agricultural supply chains across South Africa and into regional African markets.</p>
+    </div>
+    <div ref="{{ reveal }}" style="flex:1 1 420px;min-width:300px;position:relative">
+      <svg viewBox="0 0 400 300" style="position:absolute;left:-30px;top:-30px;width:120%;height:120%;z-index:0;opacity:0.5" aria-hidden="true">
+        <circle cx="40" cy="60" r="3" fill="#5A747C"></circle>
+        <circle cx="340" cy="40" r="3" fill="#5A747C"></circle>
+        <circle cx="200" cy="260" r="3" fill="#5A747C"></circle>
+        <line x1="40" y1="60" x2="200" y2="260" stroke="#5A747C" stroke-width="1"></line>
+        <line x1="340" y1="40" x2="200" y2="260" stroke="#5A747C" stroke-width="1"></line>
+      </svg>
+      <div style="position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <video ref="{{ setFieldVideoRef }}" playsInline="" preload="none" style="grid-column:1/3;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px;display:block" aria-label="Broccoli field footage">
+          <source src="uploads/network-dynamics-broccoli-claude-ready-703cc1b2.mp4" type="video/mp4">
+        </video>
+        <video ref="{{ setFieldVideoRef }}" playsInline="" preload="none" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:4px;display:block" aria-label="Protea footage">
+          <source src="uploads/network-dynamics-protea-claude-ready-a0322e87.mp4" type="video/mp4">
+        </video>
+        <video ref="{{ setFieldVideoRef }}" playsInline="" preload="none" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:4px;display:block" aria-label="Strawberry footage">
+          <source src="uploads/network-dynamics-strawberry-claude-ready.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:clamp(70px,9vw,120px) clamp(20px,5vw,56px);background:#F7FBFC">
+  <div style="max-width:1280px;margin:0 auto">
+    <div ref="{{ reveal }}" style="max-width:640px;margin:0 0 56px">
+      <p style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#5A747C;margin:0 0 18px">OUR OPERATIONAL SCALE</p>
+      <h2 style="font-family:'Oswald',sans-serif;font-weight:500;font-size:clamp(30px,3.6vw,46px);color:#0B5662;line-height:1.15;margin:0">Infrastructure built to keep products moving.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:#E9F3F5;border:1px solid #E9F3F5;margin-bottom:56px">
+      <sc-for list="{{ stats }}" as="stat" hint-placeholder-count="6">
+        <div ref="{{ stat.setRef }}" style="background:#FFFFFF;padding:32px 24px;transition:background 0.3s ease,transform 0.3s ease" style-hover="background:#F7FBFC;transform:translateY(-3px)">
+          <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(32px,4vw,44px);color:#0B5662;line-height:1;margin:0 0 10px">
+            <span ref="{{ stat.setCountRef }}">0</span><span>{{ stat.suffix }}</span>
+          </div>
+          <p style="font-size:16px;line-height:1.4;color:#5A747C;margin:0;font-family:'Cormorant Garamond',serif">{{ stat.label }}</p>
+        </div>
+      </sc-for>
+    </div>
+    <div ref="{{ reveal }}" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
+      <sc-for list="{{ facts }}" as="fact" hint-placeholder-count="7">
+        <div style="display:flex;gap:12px;align-items:baseline;background:#FFFFFF;border:1px solid #E9F3F5;border-radius:2px;padding:18px 20px;transition:border-color 0.25s ease,box-shadow 0.25s ease" style-hover="border-color:#0B5662;box-shadow:0 4px 18px rgba(11,86,98,0.08)">
+          <span style="color:#EFA18E;font-size:14px">&mdash;</span>
+          <p style="font-size:18px;line-height:1.5;color:#26383D;margin:0;transition:font-weight 0.2s ease" style-hover="font-weight:600">{{ fact }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<div style="overflow:hidden;background:#F7FBFC;padding:36px 0;border-top:1px solid #E9F3F5;border-bottom:1px solid #E9F3F5">
+  <div style="display:flex;width:max-content;animation:nd-marquee 40s linear infinite">
+    <sc-for list="{{ marqueeImages }}" as="img" hint-placeholder-count="17">
+      <img src="{{ img.src }}" alt="{{ img.alt }}" loading="lazy" style="height:110px;width:auto;margin-right:28px;border-radius:4px;flex-shrink:0"/>
+    </sc-for>
+    <sc-for list="{{ marqueeImages }}" as="img" hint-placeholder-count="17">
+      <img src="{{ img.src }}" alt="" aria-hidden="true" loading="lazy" style="height:110px;width:auto;margin-right:28px;border-radius:4px;flex-shrink:0"/>
+    </sc-for>
+  </div>
+</div>
+
+<section id="services" style="padding:clamp(80px,10vw,140px) clamp(20px,5vw,56px);max-width:1280px;margin:0 auto">
+  <div ref="{{ reveal }}" style="max-width:640px;margin:0 0 60px">
+    <p style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#5A747C;margin:0 0 18px">CONNECTED SERVICES</p>
+    <h2 style="font-family:'Oswald',sans-serif;font-weight:500;font-size:clamp(30px,3.6vw,46px);color:#0B5662;line-height:1.15;margin:0">Hands-on support across the supply chain.</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:36px 32px">
+    <sc-for list="{{ services }}" as="svc" hint-placeholder-count="8">
+      <div ref="{{ svc.setRef }}" style="background:#0B5662;padding:32px 26px;border-radius:2px;transition:background 0.3s ease,transform 0.3s ease" style-hover="background:#294C54;transform:translateY(-4px)">
+        <div style="width:34px;height:34px;margin-bottom:18px" aria-hidden="true">{{ svc.icon }}</div>
+        <h3 style="font-family:'Oswald',sans-serif;font-weight:500;font-size:19px;color:#FFFFFF;margin:0 0 10px;transition:font-weight 0.2s ease" style-hover="font-weight:700">{{ svc.title }}</h3>
+        <p style="font-size:17px;line-height:1.5;color:#CFE3E6;margin:0">{{ svc.desc }}</p>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="products" style="padding:clamp(80px,10vw,140px) clamp(20px,5vw,56px);background:#F7FBFC">
+  <div style="max-width:1280px;margin:0 auto">
+    <div ref="{{ reveal }}" style="max-width:640px;margin:0 0 70px">
+      <p style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#5A747C;margin:0 0 18px">PRODUCT NETWORK</p>
+      <h2 style="font-family:'Oswald',sans-serif;font-weight:500;font-size:clamp(30px,3.6vw,46px);color:#0B5662;line-height:1.15;margin:0">From fresh produce to essential agricultural inputs.</h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;margin-bottom:56px">
+      <sc-for list="{{ productCards }}" as="card" hint-placeholder-count="7">
+        <div ref="{{ card.setRef }}" style="background:#FFFFFF;border:1px solid #E9F3F5;border-radius:4px;overflow:hidden;transition:box-shadow 0.3s ease,transform 0.3s ease" style-hover="box-shadow:0 12px 32px rgba(11,86,98,0.14);transform:translateY(-4px)">
+          <div style="aspect-ratio:4/3;overflow:hidden;background:#F7FBFC">
+            <img src="{{ card.img }}" alt="{{ card.alt }}" style="width:100%;height:100%;object-fit:cover;display:block"/>
+          </div>
+          <div style="padding:26px 28px 30px">
+            <p style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#EFA18E;margin:0 0 12px">{{ card.label }}</p>
+            <h3 style="font-family:'Oswald',sans-serif;font-weight:500;font-size:24px;color:#0B5662;margin:0 0 12px">{{ card.title }}</h3>
+            <p style="font-size:18px;line-height:1.5;color:#26383D;margin:0 0 18px">{{ card.desc }}</p>
+            <a href="#contact" style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#0B5662;display:inline-flex;align-items:center;gap:6px">{{ card.tag }} &rarr;</a>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div ref="{{ reveal }}" style="position:relative;border-top:1px solid #E9F3F5;padding-top:56px;overflow:hidden">
+      <img src="uploads/network-dynamics-flowers-illustration.png" alt="" aria-hidden="true" style="position:absolute;right:-40px;top:20px;width:340px;max-width:50%;opacity:0.18;pointer-events:none"/>
+      <p style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#5A747C;margin:0 0 20px">ADDITIONAL CATEGORIES</p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px 30px;max-width:760px;position:relative;z-index:1">
+        <sc-for list="{{ extraCategories }}" as="cat" hint-placeholder-count="9">
+          <p style="font-size:19px;color:#294C54;margin:0;font-family:'Cormorant Garamond',serif">{{ cat }}</p>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="team" style="padding:clamp(80px,10vw,140px) clamp(20px,5vw,56px);max-width:1280px;margin:0 auto">
+  <div ref="{{ reveal }}" style="max-width:640px;margin:0 0 60px">
+    <p style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#5A747C;margin:0 0 18px">THE PEOPLE BEHIND THE NETWORK</p>
+    <h2 style="font-family:'Oswald',sans-serif;font-weight:500;font-size:clamp(30px,3.6vw,46px);color:#0B5662;line-height:1.15;margin:0">Meet the Team.</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px 32px">
+    <sc-for list="{{ team }}" as="member" hint-placeholder-count="4">
+      <div ref="{{ member.setRef }}">
+        <image-slot id="{{ member.slotId }}" shape="rounded" radius="4" placeholder="Team photo" style="width:100%;aspect-ratio:4/5;display:block;margin-bottom:18px"></image-slot>
+        <h3 style="font-family:'Oswald',sans-serif;font-weight:500;font-size:19px;color:#294C54;margin:0 0 4px">{{ member.name }}</h3>
+        <p style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:#0B5662;margin:0">{{ member.role }}</p>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="network" style="padding:clamp(80px,10vw,140px) clamp(20px,5vw,56px);max-width:1280px;margin:0 auto">
+  <div style="display:flex;flex-wrap:wrap;gap:clamp(40px,6vw,90px);align-items:center">
+    <div ref="{{ reveal }}" style="flex:1 1 380px;min-width:280px">
+      <video ref="{{ setFieldVideoRef }}" playsInline="" preload="none" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:4px;display:block" aria-label="Markets in motion footage">
+        <source src="uploads/network-dynamics-no-blocks (2).mp4" type="video/mp4">
+      </video>
+    </div>
+    <div style="flex:1 1 380px;min-width:280px">
+      <p style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#5A747C;margin:0 0 18px">MARKETS IN MOTION</p>
+      <h2 style="font-family:'Oswald',sans-serif;font-weight:500;font-size:clamp(30px,3.6vw,46px);color:#0B5662;line-height:1.15;margin:0 0 28px">A South African hub with regional reach.</h2>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:34px">
+        <sc-for list="{{ coverage }}" as="item" hint-placeholder-count="8">
+          <div ref="{{ item.setRef }}" style="display:flex;gap:12px;align-items:baseline;padding:6px 10px;margin:0 -10px;border-radius:2px;transition:background 0.6s ease">
+            <span style="color:#EFA18E;font-size:14px">&mdash;</span>
+            <p style="font-size:18px;line-height:1.5;color:#26383D;margin:0">{{ item.text }}</p>
+          </div>
+        </sc-for>
+      </div>
+      <a href="#contact" style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF;background:#0B5662;padding:16px 28px;border-radius:2px;min-height:44px;display:inline-flex;align-items:center">Discuss a Route</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding:clamp(80px,10vw,140px) clamp(20px,5vw,56px);background:#F7FBFC">
+  <div style="max-width:1280px;margin:0 auto">
+    <div ref="{{ reveal }}" style="max-width:640px;margin:0 0 70px">
+      <p style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#5A747C;margin:0 0 18px">VISIBILITY AT EVERY STAGE</p>
+      <h2 style="font-family:'Oswald',sans-serif;font-weight:500;font-size:clamp(30px,3.6vw,46px);color:#0B5662;line-height:1.15;margin:0 0 24px">Know where the work stands.</h2>
+      <p style="font-size:19px;line-height:1.6;color:#26383D;margin:0">Network Dynamics provides online track-and-trace support for operational freight and trading services, helping suppliers and customers stay connected to the movement of their products.</p>
+    </div>
+    <div ref="{{ reveal }}" style="position:relative;padding:40px 10px 10px">
+      <div style="position:absolute;left:5%;right:5%;top:60px;height:1px;background:#5A747C;opacity:0.35"></div>
+      <div style="display:flex;justify-content:space-between;position:relative">
+        <sc-for list="{{ traceStages }}" as="stage" hint-placeholder-count="5">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:16px;flex:1;min-width:80px">
+            <div style="width:{{ stage.size }}px;height:{{ stage.size }}px;border-radius:50%;background:{{ stage.color }};border:2px solid #FFFFFF;box-shadow:0 0 0 1px #5A747C"></div>
+            <p style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#294C54;text-align:center;margin:0">{{ stage.label }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding:clamp(90px,11vw,150px) clamp(20px,5vw,56px);background:#0B5662;position:relative;overflow:hidden">
+  <div ref="{{ reveal }}" style="max-width:640px;margin:0 auto;text-align:left;position:relative;z-index:1">
+    <p style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF;margin:0 0 18px">LET'S MOVE FORWARD</p>
+    <h2 style="font-family:'Oswald',sans-serif;font-weight:500;font-size:clamp(30px,3.6vw,46px);color:#FFFFFF;line-height:1.15;margin:0 0 24px">From source to market, build a stronger connection.</h2>
+    <p style="font-size:19px;line-height:1.6;color:#E9F3F5;margin:0 0 40px">Talk to Network Dynamics about trading, storage, freight, traceability or practical field-to-fork support.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:16px">
+      <a href="https://wa.me/27000000000" target="_blank" rel="noopener" style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF;background:#25D366;padding:16px 28px;border-radius:2px;min-height:44px;display:flex;align-items:center;gap:10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.14c-.24.68-1.4 1.3-1.93 1.38-.49.08-1.11.11-1.79-.11-.41-.13-.94-.31-1.62-.6-2.85-1.23-4.71-4.1-4.85-4.29-.14-.19-1.16-1.54-1.16-2.94s.73-2.09.99-2.37c.26-.29.56-.36.75-.36h.53c.17 0 .4-.06.62.48.24.58.8 2 .87 2.15.07.15.12.32.02.52-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.26 1.64 2.04 1.13 1 2.08 1.32 2.37 1.47.29.15.46.13.63-.08.17-.2.72-.85.92-1.14.19-.29.39-.24.65-.14.27.1 1.7.8 1.99.95.29.15.48.22.55.35.07.12.07.72-.17 1.4z"/></svg>WhatsApp Us</a>
+      <a href="#footer-contact" style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#0B5662;background:#FFFFFF;padding:16px 28px;border-radius:2px;min-height:44px;display:flex;align-items:center">Talk to Our Team</a>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#294C54;color:#E9F3F5;padding:70px clamp(20px,5vw,56px) 34px">
+  <div style="max-width:1280px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.15)">
+      <div style="grid-column:span 1">
+        <p style="font-family:'Oswald',sans-serif;font-weight:600;font-size:18px;letter-spacing:0.06em;color:#FFFFFF;margin:0 0 16px">NETWORK DYNAMICS</p>
+        <p style="font-size:16px;line-height:1.55;color:#C9DBDE;margin:0;max-width:260px">Agricultural trading, warehousing, cold-chain, freight and field-to-fork support from City Deep, Johannesburg.</p>
+      </div>
+      <div>
+        <p style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8FB0B5;margin:0 0 18px">Navigate</p>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <a href="#about" style="color:#E9F3F5;font-size:16px">About</a>
+          <a href="#services" style="color:#E9F3F5;font-size:16px">Services</a>
+          <a href="#products" style="color:#E9F3F5;font-size:16px">Products</a>
+          <a href="#network" style="color:#E9F3F5;font-size:16px">Our Network</a>
+        </div>
+      </div>
+      <div>
+        <p style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8FB0B5;margin:0 0 18px">Services</p>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <sc-for list="{{ footerServices }}" as="s" hint-placeholder-count="4">
+            <a href="#services" style="color:#E9F3F5;font-size:16px">{{ s }}</a>
+          </sc-for>
+        </div>
+      </div>
+      <div id="footer-contact">
+        <p style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8FB0B5;margin:0 0 18px">Contact</p>
+        <p style="font-size:16px;line-height:1.6;color:#E9F3F5;margin:0 0 10px">City Deep, Johannesburg,<br/>South Africa</p>
+        <p style="font-size:15px;line-height:1.6;color:#8FB0B5;margin:0;font-style:italic">[Phone number — to be added]<br/>[Second contact number — to be added]<br/>[Email address — to be added]</p>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding-top:24px">
+      <p style="font-size:14px;color:#8FB0B5;margin:0">&copy; 2026 Network Dynamics. All rights reserved.</p>
+      <div style="display:flex;gap:24px">
+        <a href="#" style="color:#8FB0B5;font-size:14px">Privacy Policy</a>
+        <a href="#" style="color:#8FB0B5;font-size:14px">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { mobileMenuOpen: false, isMobile: false };
+
+  constructor(props) {
+    super(props);
+    this._reducedMotion = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this._raf = null;
+    this._video = null;
+    this._fieldVideos = [];
+    this._heroWrap = null;
+    this._nav = null;
+    this._revealEls = [];
+    this._statRefs = [];
+    this._videoReady = false;
+  }
+
+  componentDidMount() {
+    this._checkMobile();
+    this._resizeHandler = () => this._checkMobile();
+    window.addEventListener('resize', this._resizeHandler);
+
+    this._scrollHandler = () => {
+      if (this._nav) {
+        this._nav.style.background = window.scrollY > 20 ? 'rgba(255,255,255,0.9)' : '#FFFFFF';
+        this._nav.style.backdropFilter = window.scrollY > 20 ? 'blur(8px)' : 'none';
+      }
+    };
+    window.addEventListener('scroll', this._scrollHandler, { passive: true });
+
+    if (this._video) {
+      this._video.muted = true;
+      this._video.loop = true;
+    }
+    this._allVideos = [this._video, ...this._fieldVideos].filter(Boolean);
+    if (!this._reducedMotion && typeof IntersectionObserver !== 'undefined') {
+      this._videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.play().catch(() => {});
+          else entry.target.pause();
+        });
+      }, { threshold: 0.25 });
+      this._allVideos.forEach(v => this._videoObserver.observe(v));
+    } else {
+      this._allVideos.forEach(v => { v.pause(); v.currentTime = 0; });
+    }
+
+    if (!this._reducedMotion && typeof IntersectionObserver !== 'undefined') {
+      this._observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.transition = 'opacity 0.65s cubic-bezier(0.25,0,0,1), transform 0.65s cubic-bezier(0.25,0,0,1)';
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            this._observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      this._revealEls.forEach((el, i) => {
+        if (!el) return;
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        setTimeout(() => this._observer.observe(el), i * 40);
+      });
+    }
+
+    if (typeof IntersectionObserver !== 'undefined') {
+      this._statObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const stat = this._statRefs.find(s => s.wrapEl === entry.target && !s._animated);
+            if (stat) { stat._animated = true; this._animateCount(stat); }
+            this._statObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' });
+      this._statRefs.forEach(s => { if (s.wrapEl) this._statObserver.observe(s.wrapEl); });
+    }
+  }
+
+  componentWillUnmount() {
+    if (this._raf) cancelAnimationFrame(this._raf);
+    window.removeEventListener('resize', this._resizeHandler);
+    window.removeEventListener('scroll', this._scrollHandler);
+    if (this._observer) this._observer.disconnect();
+    if (this._statObserver) this._statObserver.disconnect();
+    if (this._videoObserver) this._videoObserver.disconnect();
+  }
+
+  _checkMobile() {
+    const isMobile = window.innerWidth < 900;
+    if (isMobile !== this.state.isMobile) this.setState({ isMobile, mobileMenuOpen: false });
+  }
+
+  _animateCount(stat) {
+    if (!stat.countEl) return;
+    if (this._reducedMotion) { stat.countEl.textContent = stat.value; return; }
+    const duration = 1800;
+    const start = performance.now();
+    const step = (now) => {
+      const p = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - p, 3);
+      stat.countEl.textContent = Math.round(eased * stat.value);
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  renderVals() {
+    const stats = [
+      { label: 'Pallets processed per month', value: 5000, suffix: '+' },
+      { label: 'Square metres of warehousing', value: 3000, suffix: '+' },
+      { label: 'Cold-store pallet positions', value: 1000, suffix: '+' },
+      { label: 'Dry-cargo pallet positions', value: 500, suffix: '+' },
+      { label: 'Suppliers using the facilities', value: 350, suffix: '+' },
+      { label: 'Days a week operations', value: 7, suffix: '' },
+    ].map((s, i) => {
+      let entry = this._statEntries && this._statEntries[i];
+      if (!entry) {
+        entry = { wrapEl: null, countEl: null, value: s.value, _animated: false };
+        if (!this._statEntries) this._statEntries = [];
+        this._statEntries[i] = entry;
+        this._statRefs.push(entry);
+      }
+      return {
+        ...s,
+        setRef: (el) => { entry.wrapEl = el; },
+        setCountRef: (el) => { entry.countEl = el; },
+      };
+    });
+
+    const facts = [
+      'Cold storage for short-term transit at 0-5\u00b0C',
+      'Outsourced frozen-cargo capability',
+      'Four forklifts with operators',
+      'Three local-distribution trucks',
+      'Two international trucks',
+      'Backup solar and generators',
+      'Online track-and-trace operational freight and trading services',
+    ];
+
+    const services = [
+      { title: 'Project Consultation', desc: 'Start-up guidance and practical support for agricultural and distribution projects.', icon: React.createElement('svg', { viewBox: '0 0 34 34', fill: 'none', stroke: '#FFFFFF', strokeWidth: 1.4, strokeLinecap: 'round', strokeLinejoin: 'round' }, React.createElement('path', { d: 'M8 6h18v17H14l-6 5V6z' }), React.createElement('path', { d: 'M13 13h8M13 17h5' })) },
+      { title: 'Field-to-Fork Support', desc: 'Coordinated services connecting production, storage, markets and final delivery.', icon: React.createElement('svg', { viewBox: '0 0 34 34', fill: 'none', stroke: '#FFFFFF', strokeWidth: 1.4, strokeLinecap: 'round', strokeLinejoin: 'round' }, React.createElement('path', { d: 'M17 27V15' }), React.createElement('path', { d: 'M17 15c0-6-4-9-9-9 0 6 4 9 9 9z' }), React.createElement('path', { d: 'M17 19c0-4 3-6 7-6 0 4-3 6-7 6z' }), React.createElement('path', { d: 'M9 27h16' })) },
+      { title: 'Agricultural Wholesale and Retail', desc: 'Support for agricultural inputs, outputs and routes to market.', icon: React.createElement('svg', { viewBox: '0 0 34 34', fill: 'none', stroke: '#FFFFFF', strokeWidth: 1.4, strokeLinecap: 'round', strokeLinejoin: 'round' }, React.createElement('path', { d: 'M6 12l2-6h18l2 6' }), React.createElement('path', { d: 'M6 12v13h22V12' }), React.createElement('path', { d: 'M6 12a3 3 0 006 0 3 3 0 006 0 3 3 0 006 0 3 3 0 006 0' }), React.createElement('path', { d: 'M13 25v-7h8v7' })) },
+      { title: 'Marketing and Trading', desc: 'Commercial support connecting products with appropriate buyers and markets.', icon: React.createElement('svg', { viewBox: '0 0 34 34', fill: 'none', stroke: '#FFFFFF', strokeWidth: 1.4, strokeLinecap: 'round', strokeLinejoin: 'round' }, React.createElement('path', { d: 'M6 24V13M14 24V8M22 24v-9M28 24v-5' }), React.createElement('path', { d: 'M22 9l6-3v6z' })) },
+      { title: 'Cold and Warehouse Storage', desc: 'Short-term cold storage, dry storage and coordinated handling.', icon: React.createElement('svg', { viewBox: '0 0 34 34', fill: 'none', stroke: '#FFFFFF', strokeWidth: 1.4, strokeLinecap: 'round', strokeLinejoin: 'round' }, React.createElement('path', { d: 'M4 14l13-9 13 9v13H4z' }), React.createElement('path', { d: 'M17 12v13M12.5 15l4.5-2 4.5 2M12.5 22l4.5 2 4.5-2' })) },
+      { title: 'Freight', desc: 'Local, regional and international freight through owned and outsourced capacity.', icon: React.createElement('svg', { viewBox: '0 0 34 34', fill: 'none', stroke: '#FFFFFF', strokeWidth: 1.4, strokeLinecap: 'round', strokeLinejoin: 'round' }, React.createElement('path', { d: 'M4 22V11h15v11' }), React.createElement('path', { d: 'M19 15h6l4 4v3h-10z' }), React.createElement('circle', { cx: 10, cy: 25, r: 2.4 }), React.createElement('circle', { cx: 24, cy: 25, r: 2.4 })) },
+      { title: 'Traceability', desc: 'Online track-and-trace visibility for operational freight and trading services.', icon: React.createElement('svg', { viewBox: '0 0 34 34', fill: 'none', stroke: '#FFFFFF', strokeWidth: 1.4, strokeLinecap: 'round', strokeLinejoin: 'round' }, React.createElement('path', { d: 'M17 4c6 0 10 4.5 10 11 0 7-10 15-10 15S7 22 7 15c0-6.5 4-11 10-11z' }), React.createElement('circle', { cx: 17, cy: 15, r: 3.5 })) },
+      { title: 'Hands-on Operations', desc: 'Practical on-site handling backed by forklifts, operators and seven-day operations.', icon: React.createElement('svg', { viewBox: '0 0 34 34', fill: 'none', stroke: '#FFFFFF', strokeWidth: 1.4, strokeLinecap: 'round', strokeLinejoin: 'round' }, React.createElement('path', { d: 'M5 25V9h5v10' }), React.createElement('path', { d: 'M10 15h9l6 5v5H10' }), React.createElement('circle', { cx: 13, cy: 25, r: 2 }), React.createElement('circle', { cx: 23, cy: 25, r: 2 })) },
+    ].map((s) => ({ ...s, setRef: (el) => { if (el && !this._reducedMotion) this._revealEls.push(el); } }));
+
+    const productCards = [
+      { img: 'uploads/network-dynamics-apples-grapes-illustration.png', alt: 'Illustration of apples, grapes and citrus fruit', label: 'FRUIT', title: 'Fruit and vineyard-related trade.', desc: 'Apples, grapes, citrus and other orchard produce move through our network alongside the wider fresh-fruit trade.', tag: 'Explore fruit' },
+      { img: 'uploads/network-dynamics-vegetables-illustration.png', alt: 'Illustration of broccoli, onions and tomatoes', label: 'VEGETABLES', title: 'Vegetables, field to market.', desc: 'Vegetables are handled and stored alongside other fresh produce categories across our City Deep hub.', tag: 'Explore vegetables' },
+      { img: 'uploads/network-dynamics-protea-illustration.png', alt: 'Illustration of king protea flowers', label: 'FLOWERS & ALLIED RETAIL', title: 'Flowers and allied retail products.', desc: 'The king protea, a South African icon, represents the flowers and allied retail products carried through our network.', tag: 'Explore flowers' },
+      { img: 'uploads/network-dynamics-mixed-nuts-illustration.png', alt: 'Illustration of mixed nuts', label: 'NUTS', title: 'Nuts and dried produce.', desc: 'Nuts move through our warehousing and distribution alongside the wider fresh-produce trade.', tag: 'Explore nuts' },
+      { img: 'uploads/network-dynamics-seafood-illustration.png', alt: 'Illustration of fish, prawns and mussels', label: 'SEAFOOD', title: 'Seafood, handled with care.', desc: 'Fish and shellfish require the same careful cold-chain handling as our fresh produce categories.', tag: 'Explore seafood' },
+      { img: 'uploads/network-dynamics-dairy-products-illustration.png', alt: 'Illustration of dairy products', label: 'DAIRY', title: 'Dairy in the cold chain.', desc: 'Dairy products are stored and distributed under the same temperature-controlled conditions as our produce.', tag: 'Explore dairy' },
+      { img: 'uploads/network-dynamics-steak-and-chops-illustration.png', alt: 'Illustration of steak and chops', label: 'MEAT', title: 'Meat and protein categories.', desc: 'Meat products move through our cold storage and freight network alongside other temperature-sensitive goods.', tag: 'Explore meat' },
+    ].map((c) => ({ ...c, setRef: (el) => { if (el && !this._reducedMotion) this._revealEls.push(el); } }));
+
+    const extraCategories = [
+      'Alcohol', 'Confectionery and catering products', 'Farm inputs and output requirements',
+      'Seeds', 'Plants', 'Agricultural infrastructure', 'Processing plants', 'Packaging',
+    ];
+
+    const coverage = [
+      'Daily market deliveries into Johannesburg',
+      'Daily market deliveries into Pretoria',
+      'Daily market deliveries into Cape Town',
+      'Daily market deliveries into Durban',
+      'OR Tambo support for international air freight',
+      'Weekly services into Zimbabwe and Zambia',
+      'Full-truck-load and part-shipment options',
+      'Daily collection point for African markets',
+    ].map((item, i) => ({
+      text: item,
+      setRef: (el) => {
+        if (!el || this._reducedMotion || el._ndObserved) return;
+        el._ndObserved = true;
+        setTimeout(() => {
+          if (typeof IntersectionObserver === 'undefined') return;
+          const obs = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                el.style.background = '#E9F3F5';
+                setTimeout(() => { el.style.background = 'transparent'; }, 700);
+                obs.unobserve(el);
+              }
+            });
+          }, { threshold: 0.5 });
+          obs.observe(el);
+        }, i * 90);
+      },
+    }));
+
+    const traceStages = [
+      { label: 'Collection', size: 16, color: '#0B5662' },
+      { label: 'Storage', size: 20, color: '#0B5662' },
+      { label: 'In transit', size: 24, color: '#5A747C' },
+      { label: 'Border / hub', size: 20, color: '#0B5662' },
+      { label: 'Delivered', size: 16, color: '#EFA18E' },
+    ];
+
+    const footerServices = ['Freight', 'Cold Storage', 'Traceability', 'Field-to-Fork'];
+
+    const marqueeImages = [
+      { src: 'uploads/network-dynamics-vegetables-illustration-787ed576-sm.png', alt: 'Broccoli, onions and tomatoes' },
+      { src: 'uploads/network-dynamics-apples-grapes-illustration-7d290b11-sm.png', alt: 'Apples and grapes' },
+      { src: 'uploads/network-dynamics-fruit-illustration-a069a46f-sm.png', alt: 'Citrus fruit' },
+      { src: 'uploads/network-dynamics-blueberries-close-up-064a8410-sm.png', alt: 'Blueberries' },
+      { src: 'uploads/network-dynamics-oranges-close-up-7721ccc4-sm.png', alt: 'Oranges' },
+      { src: 'uploads/network-dynamics-naartjies-close-up-f712a1f8-sm.png', alt: 'Naartjies' },
+      { src: 'uploads/network-dynamics-melons-illustration-f8dad5fa-sm.png', alt: 'Melons' },
+      { src: 'uploads/network-dynamics-avocado-breaking-open-c60ebb21-sm.png', alt: 'Avocado' },
+      { src: 'uploads/network-dynamics-onions-illustration-18a1985f-sm.png', alt: 'Onions' },
+      { src: 'uploads/network-dynamics-mixed-nuts-illustration-427273fc-sm.png', alt: 'Mixed nuts' },
+      { src: 'uploads/network-dynamics-seafood-illustration-b3f8e78c-sm.png', alt: 'Seafood' },
+      { src: 'uploads/network-dynamics-steak-and-chops-illustration-sm.png', alt: 'Steak and chops' },
+      { src: 'uploads/network-dynamics-dairy-products-illustration-d201be4c-sm.png', alt: 'Dairy products' },
+      { src: 'uploads/network-dynamics-flowers-illustration-2123ead4-sm.png', alt: 'Sunflowers' },
+      { src: 'uploads/network-dynamics-protea-illustration-fc084078-sm.png', alt: 'King protea' },
+      { src: 'uploads/network-dynamics-ruscus-botanical-illustration-286c1c38-sm.png', alt: 'Ruscus botanical' },
+    ];
+
+    const team = [
+      { name: 'Gerard Heath', role: 'Owner', slotId: 'team-photo-1' },
+      { name: 'Dinah Phadu', role: 'Management and Trading', slotId: 'team-photo-2' },
+      { name: 'Thomas Chiwade', role: 'Warehouse Management', slotId: 'team-photo-3' },
+      { name: 'Sindile Dube', role: 'Logistics Management', slotId: 'team-photo-4' },
+    ].map((m) => ({ ...m, setRef: (el) => { if (el && !this._reducedMotion) this._revealEls.push(el); } }));
+
+    return {
+      isMobile: this.state.isMobile,
+      mobileMenuOpen: this.state.mobileMenuOpen,
+      toggleMenu: () => this.setState(s => ({ mobileMenuOpen: !s.mobileMenuOpen })),
+      closeMenu: () => this.setState({ mobileMenuOpen: false }),
+      setNavRef: (el) => { this._nav = el; },
+      setHeroWrapRef: (el) => { this._heroWrap = el; },
+      setVideoRef: (el) => { if (el && this._video !== el) { this._video = el; el.load(); } },
+      setFieldVideoRef: (el) => {
+        if (el && !this._fieldVideos.includes(el)) {
+          this._fieldVideos.push(el);
+          el.muted = true; el.loop = true;
+        }
+      },
+      reveal: (el) => { if (el && !this._reducedMotion) this._revealEls.push(el); },
+      stats, facts, services, extraCategories, coverage, traceStages, footerServices, team, productCards, marqueeImages,
+    };
+  }
+}
+</script>
+</body>
+</html>
