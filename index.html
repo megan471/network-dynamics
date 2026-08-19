@@ -71,7 +71,7 @@ a:hover{color:#EFA18E}
 
 <div ref="{{ setHeroWrapRef }}" style="position:relative;height:100vh">
   <div style="position:relative;height:100vh;overflow:hidden;background:#294C54">
-    <video key="hero-africa-logistics-hero-3dde4e9a" ref="{{ setVideoRef }}" playsInline="" preload="metadata" poster="network-dynamics-africa-map.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" aria-hidden="true">
+    <video autoplay muted loop key="hero-africa-logistics-hero-3dde4e9a" ref="{{ setVideoRef }}" playsInline="" preload="auto" poster="network-dynamics-africa-map.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" aria-hidden="true">
       <source src="network-dynamics-africa-logistics-hero-3dde4e9a.mp4" type="video/mp4">
     </video>
     <div style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(11,86,98,0.55) 0%, rgba(11,86,98,0.15) 45%, rgba(11,86,98,0) 65%)"></div>
@@ -138,13 +138,13 @@ a:hover{color:#EFA18E}
         <line x1="340" y1="40" x2="200" y2="260" stroke="#5A747C" stroke-width="1"></line>
       </svg>
       <div style="position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:14px">
-        <video ref="{{ setFieldVideoRef }}" playsInline="" preload="none" style="grid-column:1/3;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px;display:block" aria-label="Broccoli field footage">
+        <video autoplay muted loop ref="{{ setFieldVideoRef }}" playsInline="" preload="auto" style="grid-column:1/3;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px;display:block" aria-label="Broccoli field footage">
           <source src="network-dynamics-broccoli-claude-ready-703cc1b2.mp4" type="video/mp4">
         </video>
-        <video ref="{{ setFieldVideoRef }}" playsInline="" preload="none" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:4px;display:block" aria-label="Protea footage">
+        <video autoplay muted loop ref="{{ setFieldVideoRef }}" playsInline="" preload="auto" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:4px;display:block" aria-label="Protea footage">
           <source src="network-dynamics-protea-claude-ready-a0322e87.mp4" type="video/mp4">
         </video>
-        <video ref="{{ setFieldVideoRef }}" playsInline="" preload="none" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:4px;display:block" aria-label="Strawberry footage">
+        <video autoplay muted loop ref="{{ setFieldVideoRef }}" playsInline="" preload="auto" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:4px;display:block" aria-label="Strawberry footage">
           <source src="network-dynamics-strawberry-claude-ready.mp4" type="video/mp4">
         </video>
       </div>
@@ -260,7 +260,7 @@ a:hover{color:#EFA18E}
 <section id="network" style="padding:clamp(80px,10vw,140px) clamp(20px,5vw,56px);max-width:1280px;margin:0 auto">
   <div style="display:flex;flex-wrap:wrap;gap:clamp(40px,6vw,90px);align-items:center">
     <div ref="{{ reveal }}" style="flex:1 1 380px;min-width:280px">
-      <video ref="{{ setFieldVideoRef }}" playsInline="" preload="none" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:4px;display:block" aria-label="Markets in motion footage">
+      <video autoplay muted loop ref="{{ setFieldVideoRef }}" playsInline="" preload="auto" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:4px;display:block" aria-label="Markets in motion footage">
         <source src="network-dynamics-no-blocks (2).mp4" type="video/mp4">
       </video>
     </div>
