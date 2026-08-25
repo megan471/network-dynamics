@@ -71,7 +71,7 @@ a:hover{color:#EFA18E}
 
 <div ref="{{ setHeroWrapRef }}" style="position:relative;height:100vh">
   <div style="position:relative;height:100vh;overflow:hidden;background:#294C54">
-    <video autoplay muted loop key="hero-africa-logistics-hero-3dde4e9a" ref="{{ setVideoRef }}" playsInline="" preload="auto" poster="network-dynamics-africa-map.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" aria-hidden="true">
+    <video autoplay muted loop key="hero-africa-logistics-hero-3dde4e9a" ref="{{ setVideoRef }}" playsInline="" preload="auto" poster="network-dynamics-africa-products-logistics-hero.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" aria-hidden="true">
       <source src="network-dynamics-africa-logistics-hero-3dde4e9a.mp4" type="video/mp4">
     </video>
     <div style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(11,86,98,0.55) 0%, rgba(11,86,98,0.15) 45%, rgba(11,86,98,0) 65%)"></div>
@@ -139,13 +139,13 @@ a:hover{color:#EFA18E}
       </svg>
       <div style="position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:14px">
         <video autoplay muted loop ref="{{ setFieldVideoRef }}" playsInline="" preload="auto" style="grid-column:1/3;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px;display:block" aria-label="Broccoli field footage">
-          <source src="network-dynamics-broccoli-claude-ready-703cc1b2.mp4" type="video/mp4">
+          <source src="network-dynamics-broccoli-seed-to-plate.mp4" type="video/mp4">
         </video>
         <video autoplay muted loop ref="{{ setFieldVideoRef }}" playsInline="" preload="auto" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:4px;display:block" aria-label="Protea footage">
           <source src="network-dynamics-protea-claude-ready-a0322e87.mp4" type="video/mp4">
         </video>
         <video autoplay muted loop ref="{{ setFieldVideoRef }}" playsInline="" preload="auto" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:4px;display:block" aria-label="Strawberry footage">
-          <source src="network-dynamics-strawberry-claude-ready.mp4" type="video/mp4">
+          <source src="network-dynamics-strawberry-seed-to-plate.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -230,7 +230,7 @@ a:hover{color:#EFA18E}
     </div>
 
     <div ref="{{ reveal }}" style="position:relative;border-top:1px solid #E9F3F5;padding-top:56px;overflow:hidden">
-      <img src="network-dynamics-flowers-illustration.png" alt="" aria-hidden="true" style="position:absolute;right:-40px;top:20px;width:340px;max-width:50%;opacity:0.18;pointer-events:none"/>
+      <img src="network-dynamics-flowers-illustration-vibrant.png" alt="" aria-hidden="true" style="position:absolute;right:-40px;top:20px;width:340px;max-width:50%;opacity:0.18;pointer-events:none"/>
       <p style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#5A747C;margin:0 0 20px">ADDITIONAL CATEGORIES</p>
       <div style="display:flex;flex-wrap:wrap;gap:14px 30px;max-width:760px;position:relative;z-index:1">
         <sc-for list="{{ extraCategories }}" as="cat" hint-placeholder-count="9">
@@ -261,7 +261,7 @@ a:hover{color:#EFA18E}
   <div style="display:flex;flex-wrap:wrap;gap:clamp(40px,6vw,90px);align-items:center">
     <div ref="{{ reveal }}" style="flex:1 1 380px;min-width:280px">
       <video autoplay muted loop ref="{{ setFieldVideoRef }}" playsInline="" preload="auto" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:4px;display:block" aria-label="Markets in motion footage">
-        <source src="network-dynamics-no-blocks (2).mp4" type="video/mp4">
+        <source src="network-dynamics-simple-markets-in-motion.mp4" type="video/mp4">
       </video>
     </div>
     <div style="flex:1 1 380px;min-width:280px">
@@ -509,13 +509,13 @@ class Component extends DCLogic {
     ].map((s) => ({ ...s, setRef: (el) => { if (el && !this._reducedMotion) this._revealEls.push(el); } }));
 
     const productCards = [
-      { img: 'network-dynamics-apples-grapes-illustration.png', alt: 'Illustration of apples, grapes and citrus fruit', label: 'FRUIT', title: 'Fruit and vineyard-related trade.', desc: 'Apples, grapes, citrus and other orchard produce move through our network alongside the wider fresh-fruit trade.', tag: 'Explore fruit' },
-      { img: 'network-dynamics-vegetables-illustration.png', alt: 'Illustration of broccoli, onions and tomatoes', label: 'VEGETABLES', title: 'Vegetables, field to market.', desc: 'Vegetables are handled and stored alongside other fresh produce categories across our City Deep hub.', tag: 'Explore vegetables' },
-      { img: 'network-dynamics-protea-illustration.png', alt: 'Illustration of king protea flowers', label: 'FLOWERS & ALLIED RETAIL', title: 'Flowers and allied retail products.', desc: 'The king protea, a South African icon, represents the flowers and allied retail products carried through our network.', tag: 'Explore flowers' },
-      { img: 'network-dynamics-mixed-nuts-illustration.png', alt: 'Illustration of mixed nuts', label: 'NUTS', title: 'Nuts and dried produce.', desc: 'Nuts move through our warehousing and distribution alongside the wider fresh-produce trade.', tag: 'Explore nuts' },
-      { img: 'network-dynamics-seafood-illustration.png', alt: 'Illustration of fish, prawns and mussels', label: 'SEAFOOD', title: 'Seafood, handled with care.', desc: 'Fish and shellfish require the same careful cold-chain handling as our fresh produce categories.', tag: 'Explore seafood' },
+      { img: 'network-dynamics-apples-grapes-illustration-vibrant.png', alt: 'Illustration of apples, grapes and citrus fruit', label: 'FRUIT', title: 'Fruit and vineyard-related trade.', desc: 'Apples, grapes, citrus and other orchard produce move through our network alongside the wider fresh-fruit trade.', tag: 'Explore fruit' },
+      { img: 'network-dynamics-vegetables-illustration-vibrant.png', alt: 'Illustration of broccoli, onions and tomatoes', label: 'VEGETABLES', title: 'Vegetables, field to market.', desc: 'Vegetables are handled and stored alongside other fresh produce categories across our City Deep hub.', tag: 'Explore vegetables' },
+      { img: 'network-dynamics-protea-illustration-vibrant.png', alt: 'Illustration of king protea flowers', label: 'FLOWERS & ALLIED RETAIL', title: 'Flowers and allied retail products.', desc: 'The king protea, a South African icon, represents the flowers and allied retail products carried through our network.', tag: 'Explore flowers' },
+      { img: 'network-dynamics-mixed-nuts-illustration-vibrant.png', alt: 'Illustration of mixed nuts', label: 'NUTS', title: 'Nuts and dried produce.', desc: 'Nuts move through our warehousing and distribution alongside the wider fresh-produce trade.', tag: 'Explore nuts' },
+      { img: 'network-dynamics-seafood-illustration-vibrant.png', alt: 'Illustration of fish, prawns and mussels', label: 'SEAFOOD', title: 'Seafood, handled with care.', desc: 'Fish and shellfish require the same careful cold-chain handling as our fresh produce categories.', tag: 'Explore seafood' },
       { img: 'network-dynamics-dairy-products-illustration.png', alt: 'Illustration of dairy products', label: 'DAIRY', title: 'Dairy in the cold chain.', desc: 'Dairy products are stored and distributed under the same temperature-controlled conditions as our produce.', tag: 'Explore dairy' },
-      { img: 'network-dynamics-steak-and-chops-illustration.png', alt: 'Illustration of steak and chops', label: 'MEAT', title: 'Meat and protein categories.', desc: 'Meat products move through our cold storage and freight network alongside other temperature-sensitive goods.', tag: 'Explore meat' },
+      { img: 'network-dynamics-steak-and-chops-illustration-vibrant.png', alt: 'Illustration of steak and chops', label: 'MEAT', title: 'Meat and protein categories.', desc: 'Meat products move through our cold storage and freight network alongside other temperature-sensitive goods.', tag: 'Explore meat' },
     ].map((c) => ({ ...c, setRef: (el) => { if (el && !this._reducedMotion) this._revealEls.push(el); } }));
 
     const extraCategories = [
@@ -564,22 +564,22 @@ class Component extends DCLogic {
     const footerServices = ['Freight', 'Cold Storage', 'Traceability', 'Field-to-Fork'];
 
     const marqueeImages = [
-      { src: 'network-dynamics-vegetables-illustration-787ed576-sm.png', alt: 'Broccoli, onions and tomatoes' },
-      { src: 'network-dynamics-apples-grapes-illustration-7d290b11-sm.png', alt: 'Apples and grapes' },
-      { src: 'network-dynamics-fruit-illustration-a069a46f-sm.png', alt: 'Citrus fruit' },
-      { src: 'network-dynamics-blueberries-close-up-064a8410-sm.png', alt: 'Blueberries' },
-      { src: 'network-dynamics-oranges-close-up-7721ccc4-sm.png', alt: 'Oranges' },
-      { src: 'network-dynamics-naartjies-close-up-f712a1f8-sm.png', alt: 'Naartjies' },
-      { src: 'network-dynamics-melons-illustration-f8dad5fa-sm.png', alt: 'Melons' },
-      { src: 'network-dynamics-avocado-breaking-open-c60ebb21-sm.png', alt: 'Avocado' },
-      { src: 'network-dynamics-onions-illustration-18a1985f-sm.png', alt: 'Onions' },
-      { src: 'network-dynamics-mixed-nuts-illustration-427273fc-sm.png', alt: 'Mixed nuts' },
-      { src: 'network-dynamics-seafood-illustration-b3f8e78c-sm.png', alt: 'Seafood' },
-      { src: 'network-dynamics-steak-and-chops-illustration-sm.png', alt: 'Steak and chops' },
+      { src: 'network-dynamics-vegetables-illustration-vibrant.png', alt: 'Broccoli, onions and tomatoes' },
+      { src: 'network-dynamics-apples-grapes-illustration-vibrant.png', alt: 'Apples and grapes' },
+      { src: 'network-dynamics-fruit-illustration-vibrant.png', alt: 'Citrus fruit' },
+      { src: 'network-dynamics-blueberries-close-up-vibrant.png', alt: 'Blueberries' },
+      { src: 'network-dynamics-oranges-close-up-vibrant.png', alt: 'Oranges' },
+      { src: 'network-dynamics-naartjies-close-up-vibrant.png', alt: 'Naartjies' },
+      { src: 'network-dynamics-melons-illustration-vibrant.png', alt: 'Melons' },
+      { src: 'network-dynamics-avocado-breaking-open-vibrant.png', alt: 'Avocado' },
+      { src: 'network-dynamics-onions-illustration-vibrant.png', alt: 'Onions' },
+      { src: 'network-dynamics-mixed-nuts-illustration-vibrant.png', alt: 'Mixed nuts' },
+      { src: 'network-dynamics-seafood-illustration-vibrant.png', alt: 'Seafood' },
+      { src: 'network-dynamics-steak-and-chops-illustration-vibrant.png', alt: 'Steak and chops' },
       { src: 'network-dynamics-dairy-products-illustration-d201be4c-sm.png', alt: 'Dairy products' },
-      { src: 'network-dynamics-flowers-illustration-2123ead4-sm.png', alt: 'Sunflowers' },
-      { src: 'network-dynamics-protea-illustration-fc084078-sm.png', alt: 'King protea' },
-      { src: 'network-dynamics-ruscus-botanical-illustration-286c1c38-sm.png', alt: 'Ruscus botanical' },
+      { src: 'network-dynamics-flowers-illustration-vibrant.png', alt: 'Sunflowers' },
+      { src: 'network-dynamics-protea-illustration-vibrant.png', alt: 'King protea' },
+      { src: 'network-dynamics-ruscus-botanical-illustration-vibrant.png', alt: 'Ruscus botanical' },
     ];
 
     const team = [
